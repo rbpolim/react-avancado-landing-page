@@ -31,6 +31,7 @@ const Index = ({ data }: LandingPageProps) => {
   const pricingBox = data.attributes.pricingBox
   const sectionAboutUs = data.attributes.sectionAboutUs
   const sectionReviews = data.attributes.sectionReviews
+  const sectionFaq = data.attributes.sectionFaq
 
   return (
     <>
@@ -42,8 +43,8 @@ const Index = ({ data }: LandingPageProps) => {
       <SectionAgenda {...sectionAgenda} />
       <PricingBox {...pricingBox} />
       <SectionAboutUs {...sectionAboutUs} />
-      <SectionReviews />
-      <SectionFaq />
+      <SectionReviews {...sectionReviews} />
+      <SectionFaq {...sectionFaq} />
       <Footer />
       <JsonSchema />
     </>

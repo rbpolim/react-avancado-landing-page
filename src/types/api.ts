@@ -10,6 +10,11 @@ export type TechIconsProps = {
   }
 }
 
+export type QuestionFaqProps = {
+  question: string
+  answer: string
+}
+
 export type SocialLinksProps = {
   title: string
   url: string
@@ -137,6 +142,11 @@ export type SectionReviewsProps = {
   reviews: ReviewsProps[]
 }
 
+export type SectionFaqProps = {
+  title: string
+  questions: QuestionFaqProps[]
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
@@ -150,6 +160,7 @@ export type LandingPageProps = {
       pricingBox: PricingBoxProps
       sectionAboutUs: SectionAboutUsProps
       sectionReviews: SectionReviewsProps
+      sectionFaq: SectionFaqProps
     }
   }
 }
