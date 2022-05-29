@@ -20,7 +20,7 @@ const SectionAboutUs = ({ title, authors }: SectionAboutUsProps) => (
           key={attributes.name}
           name={attributes.name}
           role={attributes.role}
-          image={attributes.photo.data.attributes}
+          photo={attributes.photo.data.attributes}
           socialLinks={attributes.socialLinks}
           description={attributes.description}
         />

@@ -17,7 +17,7 @@ const icons = {
 type Props = {
   name: string
   role: string
-  image: {
+  photo: {
     alternativeText: string
     url: string
   }
@@ -28,18 +28,16 @@ type Props = {
 const ProfileCard = ({
   name,
   role,
-  image,
+  photo,
   socialLinks,
   description
 }: Props) => (
   <S.Card key={name}>
-    <S.Image>
-      <img
-        src={getImageUrl(image.url)}
-        alt={image.alternativeText}
-        loading="lazy"
-      />
-    </S.Image>
+    <S.Image
+      src={getImageUrl(photo.url)}
+      alt={photo.alternativeText}
+      loading="lazy"
+    />
     <S.Name>{name}</S.Name>
     <S.Role>{role}</S.Role>
     <S.SocialLinks>

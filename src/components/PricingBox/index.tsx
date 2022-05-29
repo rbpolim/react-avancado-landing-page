@@ -25,15 +25,15 @@ const PricingBox = ({
         <span>{`${numberInstallments}x de`}</span> {`R$${priceInstallment}`}
       </S.DiscountPrice>
     </S.Prices>
-    <S.BenefitsList>
-      <S.BenefitsItem dangerouslySetInnerHTML={{ __html: benefits }} />
-    </S.BenefitsList>
+    <S.BenefitsList dangerouslySetInnerHTML={{ __html: benefits }} />
 
     <Button href={button.url} onClick={onClick} withPrice>
       <p>Comprar o curso</p>
       <div>
-        <S.ButtonFullPrice>R$549</S.ButtonFullPrice>
-        <S.ButtonDiscountPrice>R$399</S.ButtonDiscountPrice>
+        <S.ButtonFullPrice>R${totalPrice}</S.ButtonFullPrice>
+        <S.ButtonDiscountPrice>
+          R${numberInstallments * priceInstallment}
+        </S.ButtonDiscountPrice>
       </div>
     </Button>
   </S.Box>

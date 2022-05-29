@@ -37,14 +37,8 @@ const SectionReviews = ({ title, reviews }: SectionReviewsProps) => (
 
     <S.Content>
       <Slider {...settings}>
-        {reviews.map(({ name, photo, text }, index) => (
-          <ReviewCard
-            id={index}
-            key={index}
-            name={name}
-            image={photo.data.attributes}
-            description={text}
-          />
+        {reviews.map(({ id, name, photo, text }) => (
+          <ReviewCard id={id} key={id} name={name} photo={photo} text={text} />
         ))}
       </Slider>
     </S.Content>

@@ -132,6 +132,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     sectionReviews {
       title
       reviews {
+        id
         photo {
           data {
             attributes {

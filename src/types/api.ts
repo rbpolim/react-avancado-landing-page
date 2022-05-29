@@ -1,4 +1,31 @@
-export type TechIconsProps = {
+export type Image = {
+  data: {
+    attributes: {
+      alternativeText: string
+      url: string
+    }
+  }
+}
+
+export type LogoProps = Image
+
+export type HeaderProps = {
+  title: string
+  description: string
+  button: {
+    label: string
+    url: string
+  }
+  image: Image
+}
+
+export type SectionAboutProjectProps = {
+  title: string
+  description: string
+  image: Image
+}
+
+export type TechIcon = {
   title: string
   icon: {
     data: {
@@ -10,108 +37,29 @@ export type TechIconsProps = {
   }
 }
 
-export type QuestionFaqProps = {
-  question: string
-  answer: string
-}
-
-export type SocialLinksProps = {
+export type SectionTechProps = {
   title: string
-  url: string
+  techIcons: TechIcon[]
 }
 
-export type AuthorsProps = {
-  attributes: {
-    photo: {
-      data: {
-        attributes: {
-          alternativeText: string
-          url: string
-        }
-      }
-    }
-    name: string
-    role: string
-    socialLinks: SocialLinksProps[]
-    description: string
-  }
-}
-
-export type ConceptsProps = {
+export type Concept = {
   title: string
 }
 
-export type LogoProps = {
-  data: {
-    attributes: {
-      alternativeText: string
-      url: string
-    }
-  }
+export type SectionConceptsProps = {
+  title: string
+  concepts: Concept[]
 }
 
-export type ReviewsProps = {
-  photo: {
-    data: {
-      attributes: {
-        alternativeText: string
-        url: string
-      }
-    }
-  }
-  name: string
-  text: string
-}
-
-export type ModulesProps = {
+export type Module = {
   title: string
   subtitle: string
   description: string
 }
 
-export type HeaderProps = {
-  title: string
-  description: string
-  button: {
-    label: string
-    url: string
-  }
-  image: {
-    data: {
-      attributes: {
-        alternativeText: string
-        url: string
-      }
-    }
-  }
-}
-
-export type SectionAboutProjectProps = {
-  title: string
-  description: string
-  image: {
-    data: {
-      attributes: {
-        alternativeText: string
-        url: string
-      }
-    }
-  }
-}
-
-export type SectionTechProps = {
-  title: string
-  techIcons: TechIconsProps[]
-}
-
-export type SectionConceptsProps = {
-  title: string
-  concepts: ConceptsProps[]
-}
-
 export type SectionModulesProps = {
   title: string
-  modules: ModulesProps[]
+  modules: Module[]
 }
 
 export type SectionAgendaProps = {
@@ -120,9 +68,9 @@ export type SectionAgendaProps = {
 }
 
 export type PricingBoxProps = {
-  totalPrice: string
-  numberInstallments: string
-  priceInstallment: string
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
   benefits: string
   button: {
     label: string
@@ -130,21 +78,48 @@ export type PricingBoxProps = {
   }
 }
 
+export type SocialLink = {
+  title: string
+  url: string
+}
+
+export type Author = {
+  attributes: {
+    photo: Image
+    name: string
+    role: string
+    socialLinks: SocialLink[]
+    description: string
+  }
+}
+
 export type SectionAboutUsProps = {
   title: string
   authors: {
-    data: AuthorsProps[]
+    data: Author[]
   }
+}
+
+export type Review = {
+  id: string
+  photo: Image
+  name: string
+  text: string
 }
 
 export type SectionReviewsProps = {
   title: string
-  reviews: ReviewsProps[]
+  reviews: Review[]
+}
+
+export type Question = {
+  question: string
+  answer: string
 }
 
 export type SectionFaqProps = {
   title: string
-  questions: QuestionFaqProps[]
+  questions: Question[]
 }
 
 export type LandingPageProps = {
