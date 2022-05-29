@@ -26,6 +26,11 @@ const Index = ({ data }: LandingPageProps) => {
   const sectionAboutProject = data.attributes.sectionAboutProject
   const sectionTech = data.attributes.sectionTech
   const sectionConcepts = data.attributes.sectionConcepts
+  const sectionModules = data.attributes.sectionModules
+  const sectionAgenda = data.attributes.sectionAgenda
+  const pricingBox = data.attributes.pricingBox
+  const sectionAboutUs = data.attributes.sectionAboutUs
+  const sectionReviews = data.attributes.sectionReviews
 
   return (
     <>
@@ -33,10 +38,10 @@ const Index = ({ data }: LandingPageProps) => {
       <SectionAboutProject {...sectionAboutProject} />
       <SectionTech {...sectionTech} />
       <SectionConcepts {...sectionConcepts} />
-      <SectionModules />
-      <SectionAgenda />
-      <PricingBox />
-      <SectionAboutUs />
+      <SectionModules {...sectionModules} />
+      <SectionAgenda {...sectionAgenda} />
+      <PricingBox {...pricingBox} />
+      <SectionAboutUs {...sectionAboutUs} />
       <SectionReviews />
       <SectionFaq />
       <Footer />

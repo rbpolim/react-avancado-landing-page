@@ -70,6 +70,82 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionModules on LandingPage {
+    sectionModules {
+      title
+      modules {
+        title
+        subtitle
+        description
+      }
+    }
+  }
+
+  fragment sectionAgenda on LandingPage {
+    sectionAgenda {
+      title
+      description
+    }
+  }
+
+  fragment pricingBox on LandingPage {
+    pricingBox {
+      totalPrice
+      numberInstallments
+      priceInstallment
+      benefits
+      button {
+        label
+        url
+      }
+    }
+  }
+
+  fragment sectionAboutUs on LandingPage {
+    sectionAboutUs {
+      title
+      authors {
+        data {
+          attributes {
+            photo {
+              data {
+                attributes {
+                  alternativeText
+                  url
+                }
+              }
+            }
+            name
+            role
+            socialLinks {
+              title
+              url
+            }
+            description
+          }
+        }
+      }
+    }
+  }
+
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        photo {
+          data {
+            attributes {
+              alternativeText
+              url
+            }
+          }
+        }
+        name
+        text
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
@@ -79,6 +155,11 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...sectionAboutProject
           ...sectionTech
           ...sectionConcepts
+          ...sectionModules
+          ...sectionAgenda
+          ...pricingBox
+          ...sectionAboutUs
+          ...sectionReviews
         }
       }
     }
