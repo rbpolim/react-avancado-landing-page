@@ -1,39 +1,36 @@
-# Simple NextJS Quick Start
 
-A simple project starter to work with React, NextJS and Styled Components
+# Landing-Page
 
-You can see the example in [https://nextjs-quickstart.now.sh/](https://nextjs-quickstart.now.sh/)
+This project was build in course [React-Avancado](https://willianjusten.com.br/cursos) by [Willian Justen](https://twitter.com/Willian_justen).
 
-### 📦 Install
 
-```
-$ git clone https://github.com/guilouro/simple-nextjs-quick-start.git
+## Screenshots
 
-$ yarn install
-```
+![posts](https://user-images.githubusercontent.com/66570560/170893872-c9e7d1aa-4101-4796-b574-826206ab360b.png)
 
-### 🔨 How to use
 
-Runs next which starts Next.js in development mode
+## Demo
 
-```bash
-$ yarn dev
-```
+https://reactavancado.com.br/
 
-Runs next build which builds the application for production usage
 
-```bash
-$ yarn build
-```
+## API Reference
 
-Runs next start which starts a Next.js production server
+This client consumes a backend built in GraphQL
 
-```bash
-$ yarn start
-```
 
-Runs next build and export which exports a files in a `out` folder to deploy
+## Environment Variables
 
-```bash
-$ yarn deploy
-```
+To run this project, you will need to add the following environment variables to your .env file
+
+`GRAPHQL_HOST`
+
+`NEXT_PUBLIC_IMAGE_HOST`
+
+
+## Tech Stack
+
+**Client:** NextJS, Styled-Components
+
+**Server:** Node, GrahpQL, Strapi
+
